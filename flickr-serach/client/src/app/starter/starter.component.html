@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-12">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row button-group">
+                                <div class="col-lg-6 col-xlg-6 m-b-30">
+                                    <input type="text" class="form-control" name="searchTag" placeholder="Search by image tag" [(ngModel)]="searchingTag">
+                                </div>
+                                    <div class="col-lg-6 col-xlg-6 m-b-30">
+                                    <button type="button" class="btn btn-success" (click)="getFlickrImages()"><i class="fa fa-search"></i> Search</button>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                        
+        <!-- Row -->
+        <div class="row">
+            <!-- column -->
+            <div class="col-lg-3 col-md-6" *ngFor="let img of flickrImages">
+                <!-- Card -->
+                <div class="card">
+                    <img class="card-img-top img-responsive" style="width:auto; height:250px" src={{img}} alt="Card image cap">
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+        <!-- Row -->
+    </div>
+</div>
+<!-- End Row -->
